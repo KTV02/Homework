@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package terminplaner;
 
 import java.util.logging.Level;
@@ -41,7 +42,7 @@ public class TerminPlanerTest {
         else
         assertEquals(21, 2);
     }
-
+    
     @Test
     public void deleteTest() {
         TerminPlaner planer = new TerminPlaner();
@@ -54,6 +55,34 @@ public class TerminPlanerTest {
         }
         planer.g.delete();
         assertEquals(1, planer.l.size());
+    }  
+    @Test
+    public void testIntersectingEvents(){
+        TerminPlaner planer = new TerminPlaner();
+        planer.add("Kaffe kochen", 21, 24);
+        planer.add("Tisch abräumen", 21, 22);
+        assertEquals(1, planer.l.size());
+        
     }
-
+    @Test
+    public void notFoundTest() throws InterruptedException{
+         TerminPlaner planer = new TerminPlaner();
+        planer.add("Kaffe kochen", 21, 22);
+        planer.add("Tisch abräumen", 23, 24);
+        planer.g.suchen(19);
+        assertEquals("No Events found",planer.g.getDisplay().getText());
+    }
+    @Test
+    public void terminAnzeigeTest(){
+        TerminPlaner planer = new TerminPlaner();
+        planer.add("Kaffe kochen", 21, 22);
+         planer.g.fillDisplay();
+        assertEquals("1. Kaffe kochen von 21 bis 22\n" +" Anzahl der Termine Insgesamt 1",planer.g.getDisplay().getText());
+        
+    }
 }
+    
+    
+   
+
+

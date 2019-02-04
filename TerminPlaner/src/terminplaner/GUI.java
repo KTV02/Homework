@@ -7,7 +7,7 @@ package terminplaner;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import javax.swing.*;
 /**
  *
  * @author KrempLen
@@ -75,7 +75,7 @@ public class GUI extends javax.swing.JFrame {
         for (Termin x : t.getNext()) {
             if (x.getSTime() <= search && x.getETime() >= search) {
                 set = x;
-                System.out.println("h");
+                //System.out.println("h");
             }
         }
 
@@ -94,6 +94,10 @@ public class GUI extends javax.swing.JFrame {
            display.setText("deleted");
         }
     }
+    public JTextArea getDisplay(){
+     return display;   
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
