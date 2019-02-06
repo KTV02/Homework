@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 /**
  * Beschreiben Sie hier die Klasse Tester.
  * 
@@ -37,10 +38,10 @@ public class Tester
 
     public void printZahlen(int range) throws IOException{
         BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
-        String f="Primzahlen bis "+range+" : ";
+        String f="Primzahlen bis "+range+" : "+System.lineSeparator();
         for(int i=0;i<=range;i++){
             if(primzahl(i)){
-                f=f+i+"; ";        
+                f=f+i+System.lineSeparator();        
             }
         }
         writer.write(f);
