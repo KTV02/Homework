@@ -1,0 +1,10 @@
+
+Primzahlen bis 20 : 5
+Primzahlen bis 20 : 57
+Primzahlen bis 20 : 5710
+Primzahlen bis 20 : 571011
+Primzahlen bis 20 : 57101113
+Primzahlen bis 20 : 5710111314
+Primzahlen bis 20 : 571011131417
+Primzahlen bis 20 : 57101113141718
+Primzahlen bis 20 : 5710111314171819Primzahlen bis 20 : 5710111314171819
