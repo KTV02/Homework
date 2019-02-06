@@ -7,24 +7,28 @@ import java.util.*;
  */
 public class Tester
 {
-  public void primzahl(int p){
+  public boolean primzahl(int p){
       int wurzelp = (int) Math.sqrt(p); 
       int[] array = new int[wurzelp];
       boolean s = false;
-      for(int i=0; i<Math.sqrt(p); i++){
-          array[i]=i;
+      for(int i=0; i<(Math.sqrt(p)-1); i++){
+          array[i]=i+1;
         }
       for (int x: array){
           if(p%x==0){
-              s = true;
-            }
-          else{
               s = false;
             }
+          else{
+              s = true;
+            }
         }
-        if(s==true)
+        if(s==true){
           System.out.println("Ja, " + p + " ist eine Primzahl.");
-          else
+          return true;
+        }
+          else{
           System.out.println("Nein, " + p + " ist keine Primzahl.");
+          return false;
+        }
     }
 }

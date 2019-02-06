@@ -14,21 +14,15 @@ import org.junit.Test;
 public class TesterTest
 {
     Tester t;
-    public TesterTest()
+    @Test
+    public void primzahltrueTest()
     {
         t=new Tester();
+        assertEquals(true, t.primzahl(101));
     }
-    public void test(){
-        
-    }
-
-    @Before
-    public void setUp()
-    {
-        
-    }
-    @After
-    public void tearDown()
-    {
+    @Test
+    public void primzahlFalseTest(){
+        t=new Tester();
+        assertEquals(false, t.primzahl(69));
     }
 }
