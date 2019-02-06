@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 /**
  * Beschreiben Sie hier die Klasse Tester.
  * 
@@ -7,28 +8,44 @@ import java.util.*;
  */
 public class Tester
 {
+
   public boolean primzahl(int p){
       int wurzelp = (int) Math.sqrt(p); 
       int[] array = new int[wurzelp];
       boolean s = false;
       for(int i=0; i<wurzelp; i++){
           array[i]=i+1;
+
         }
-      for (int x: array){
-          if(p%x==0){
-              s = false;
+        for (int x: array){
+            if(p%x==0){
+                s = false;
             }
-          else{
-              s = true;
+            else{
+                s = true;
             }
         }
         if(s==true){
-          System.out.println("Ja, " + p + " ist eine Primzahl.");
-          return true;
+            System.out.println("Ja, " + p + " ist eine Primzahl.");
+            return true;
         }
-          else{
-          System.out.println("Nein, " + p + " ist keine Primzahl.");
-          return false;
+        else{
+            System.out.println("Nein, " + p + " ist keine Primzahl.");
+            return false;
         }
+
+    }
+
+    public void printZahlen(int range) throws IOException{
+        BufferedWriter writer = new BufferedWriter(new FileWriter("samplefile1.txt"));
+        String f="Primzahlen bis "+range+" : ";
+        for(int i=0;i<=range;i++){
+            if(primzahl(i))
+                f=f+i+"; \n";
+
+        }
+        writer.write(f);
+        writer.close();
     }
 }
+
