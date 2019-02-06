@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Ampel
+comment1.params=
+comment1.target=Ampel()
+comment2.params=
+comment2.target=void\ anschalten()
+comment3.params=
+comment3.target=void\ rot()
+comment4.params=
+comment4.target=void\ gr\u00FCn()
+comment5.params=
+comment5.target=void\ anhalten()
+numComments=6

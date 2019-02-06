@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Teddy
+comment1.params=
+comment1.target=Teddy()
+comment2.params=
+comment2.target=void\ springen()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=betrag
+comment4.target=void\ verringereLeben(int)
+comment5.params=
+comment5.target=int\ getWert()
+comment6.params=
+comment6.target=boolean\ hatWert()
+numComments=7

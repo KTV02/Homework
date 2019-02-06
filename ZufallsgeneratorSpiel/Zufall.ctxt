@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Zufall
+comment1.params=s
+comment1.target=void\ abmelden(Spiel)
+comment2.params=s
+comment2.target=void\ anmelden(Spiel)
+comment3.params=
+comment3.target=void\ alleBenachrichtigen()
+numComments=4

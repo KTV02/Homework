@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Spieler
+comment1.params=
+comment1.target=Spieler()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ treffeTeddies()
+comment4.params=
+comment4.target=void\ laufen()
+numComments=5
