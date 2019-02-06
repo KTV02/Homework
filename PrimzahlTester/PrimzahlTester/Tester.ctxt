@@ -2,12 +2,7 @@
 comment0.target=Tester
 comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Tester.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=p
-<<<<<<< HEAD
-comment1.target=void\ primzahl(int)
+comment1.target=boolean\ primzahl(int)
 comment2.params=range
 comment2.target=void\ printZahlen(int)
 numComments=3
-=======
-comment1.target=boolean\ primzahl(int)
-numComments=2
->>>>>>> c74d162d488902bd5c9aeb15403975d17e459d58
