@@ -17,7 +17,7 @@ public class Tester
       for (int x: array){
           if(p%x==0){
               s = false;
-              if(x>2)
+              if(x>=2)
               break;
             }
           else{
