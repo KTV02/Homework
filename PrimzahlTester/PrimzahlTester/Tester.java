@@ -11,7 +11,7 @@ public class Tester
       int wurzelp = (int) Math.sqrt(p); 
       int[] array = new int[wurzelp];
       boolean s = false;
-      for(int i=0; i<(Math.sqrt(p)-1); i++){
+      for(int i=0; i<wurzelp; i++){
           array[i]=i+1;
         }
       for (int x: array){
