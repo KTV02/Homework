@@ -13,6 +13,9 @@ public class Tester
       int wurzelp = (int) Math.sqrt(p); 
       int[] array = new int[wurzelp];
       boolean s = false;
+      if(p<1){
+         throw new IllegalArgumentException("Alle Zahlen unter 1 sind nicht sinnvoll"); 
+        }
       for(int i=0; i<wurzelp; i++){
           array[i]=i+1;
         }
@@ -26,7 +29,7 @@ public class Tester
               s = true;
             }
         }
-        if(s==true||p==2){
+        if(s==true||p==2||p==3){
           System.out.println("Ja, " + p + " ist eine Primzahl.");
           return true;
         }
