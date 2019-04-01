@@ -9,33 +9,33 @@ import java.io.*;
 public class Tester
 {
 
-  public boolean primzahl(int p){
-      int wurzelp = (int) Math.sqrt(p); 
-      int[] array = new int[wurzelp];
-      boolean s = false;
-      if(p<1){
-         throw new IllegalArgumentException("Alle Zahlen unter 1 sind nicht sinnvoll"); 
+    public boolean primzahl(int p){
+        int wurzelp = (int) Math.sqrt(p); 
+        int[] array = new int[wurzelp];
+        boolean s = false;
+        if(p<1){
+            throw new IllegalArgumentException("Alle Zahlen unter 1 sind nicht sinnvoll"); 
         }
-      for(int i=0; i<wurzelp; i++){
-          array[i]=i+1;
+        for(int i=0; i<wurzelp; i++){
+            array[i]=i+1;
         }
-      for (int x: array){
-          if(p%x==0){
-              s = false;
-              if(x>=2)
-              break;
+        for (int x: array){
+            if(p%x==0){
+                s = false;
+                if(x>=2)
+                    break;
             }
-          else{
-              s = true;
+            else{
+                s = true;
             }
         }
         if(s==true||p==2||p==3){
-          System.out.println("Ja, " + p + " ist eine Primzahl.");
-          return true;
+            System.out.println("Ja, " + p + " ist eine Primzahl.");
+            return true;
         }
-          else{
-          System.out.println("Nein, " + p + " ist keine Primzahl.");
-          return false;
+        else{
+            System.out.println("Nein, " + p + " ist keine Primzahl.");
+            return false;
         }
     }
 

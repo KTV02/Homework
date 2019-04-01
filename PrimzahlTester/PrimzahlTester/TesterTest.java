@@ -77,6 +77,10 @@ public class TesterTest
         }
         assertTrue(illegalArgument);
     }
-
+    @Test (expected = IllegalArgumentException.class)
+    public void testeMinus2(){
+        t=new Tester();
+        t.primzahl(-2);
+    }
 }
 
