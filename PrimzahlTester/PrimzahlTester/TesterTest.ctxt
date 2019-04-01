@@ -17,4 +17,6 @@ comment7.params=
 comment7.target=void\ teste0()
 comment8.params=
 comment8.target=void\ testeMinus1()
-numComments=9
+comment9.params=
+comment9.target=void\ testeMinus2()
+numComments=10
