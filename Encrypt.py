@@ -37,6 +37,14 @@ def reverseUncool(content):
 def rotate(content,rotation):
     rotated=""
     for x in content:
-        
-        rotated+=x
+        lowerasci=ord(str.lower(x))
+        if 96<lowerasci<(123-rotation):
+            rotated+=chr(lowerasci+ rotation)
+        elif 123>lowerasci>(123-rotation):
+            rotated+=chr(lowerasci+rotation-26)
+        else:
+            rotated+=" "
     return rotated
+
+def caesar(content):
+    return rotate(content,2)
