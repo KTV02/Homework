@@ -1,4 +1,45 @@
 #BlueJ package file
+<<<<<<< HEAD
+<<<<<<< HEAD
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=292
+=======
+<<<<<<< HEAD
+editor.fx.0.height=1047
+editor.fx.0.width=974
+editor.fx.0.x=-7
+editor.fx.0.y=0
+objectbench.height=202
+objectbench.width=556
+package.divider.horizontal=0.6002132196162047
+package.divider.vertical=0.5105386416861827
+package.editor.height=211
+package.editor.width=810
+package.editor.x=953
+package.editor.y=0
+package.frame.height=527
+package.frame.width=974
+=======
+editor.fx.0.height=760
+editor.fx.0.width=814
+editor.fx.0.x=500
+editor.fx.0.y=213
+objectbench.height=209
+>>>>>>> e0396b82a840f7dd7de64da3d0c1c3500335e39f
+objectbench.width=2536
+package.divider.horizontal=0.5810234541577826
+package.divider.vertical=0.7727963525835866
+package.editor.height=1010
+package.editor.width=2425
+package.editor.x=-663
+package.editor.y=188
+package.frame.height=1414
+package.frame.width=2574
+>>>>>>> 255062cd11f383bf858d7bd6c858561687fa9e1d
+=======
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=552
@@ -13,6 +54,7 @@ package.editor.x=-8
 package.editor.y=-8
 package.frame.height=1056
 package.frame.width=1936
+>>>>>>> 1a01531bf711d514860bd57a2fe8abf26abe293b
 package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
@@ -30,13 +72,13 @@ target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=80
-target1.x=140
-target1.y=190
+target1.x=610
+target1.y=200
 target2.height=50
 target2.name=TesterTest
 target2.showInterface=false
 target2.type=UnitTestTargetJunit4
 target2.typeParameters=
 target2.width=80
-target2.x=170
-target2.y=160
+target2.x=640
+target2.y=170
