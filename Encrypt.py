@@ -36,7 +36,6 @@ def reverseUncool(content):
 
 def rotate(content,rotation):
     rotated=""
-    for x in content:
-        
-        rotated+=x
+    for x in content:   
+        rotated+=chr(ord(x) +1)
     return rotated
