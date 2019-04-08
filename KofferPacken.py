@@ -1,14 +1,11 @@
 
-
-
-def eingabeFunktion(nachricht):
+def eingabeFunktion():
     liste = []
-    print(nachricht)
     eingabe = "  "
     while not eingabe=="":
         eingabe = input()
-        liste.append(eingabe)
-        #spieler= spieler + [eingabe]
+        if not eingabe=="":
+            liste.append(eingabe)
     return liste
 
 def loescheFenster():
@@ -19,25 +16,31 @@ def spielen():
     koffer = []
     spieler = []
     spielerCounter = 0
-    spieler = eingabeFunktion("Gebe hier die Spielernamen ein")
-        if spielerCounter<=len(spieler):
-            print(spieler[spielerCounter], "Was möchtest du in deinen Koffer packen?")
-            eingabeFunktion("")
+    print("Gebe hier die Spielernamen ein")
+    spieler = eingabeFunktion()
+   
+    while True:
+        if spielerCounter<len(spieler):
+                print(spieler[spielerCounter], "Was möchtest du in deinen Koffer packen?")
+                koffer = pruefen(koffer,eingabeFunktion(),spieler[spielerCounter])
+                loescheFenster()
         else:
-            spielerCounter = 0
-            print(spieler[spielerCounter], "Was möchtest du in deinen Koffer packen?")
-            eingabeFunktion("")
-    koffer = pruefen(koffer,eingabeFunktion(""),spieler[spielerCounter])
-    spielerCounter+=1
-    
+                spielerCounter = 0
+                print(spieler[spielerCounter], "Was möchtest du in deinen Koffer packen?")
+                koffer = pruefen(koffer,eingabeFunktion(),spieler[spielerCounter])
+                loescheFenster()
+        spielerCounter+=1
+        
 
 def pruefen(alteListe, neueListe, player):
     counter = 0
     for x in neueListe:
-        if not counter>len(alteListe): 
+        if not counter>=len(alteListe): 
             if alteListe[counter]==x:
                 counter+=1
             else:
                 print(player, ", du hast leider verloren")
+                exit(0)
+                
         else:
             return neueListe
