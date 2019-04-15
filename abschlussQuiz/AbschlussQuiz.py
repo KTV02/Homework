@@ -58,7 +58,7 @@ def quizStarten():
                         exit(0)
                 else:
                     print("Alle haben Verloren -Die Welt liegt in Trümmern")
-                    verloren=False
+                    verloren=True
                     exit(0)
             else:
                 spielerCounter=-1
