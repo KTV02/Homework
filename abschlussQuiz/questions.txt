@@ -1,2 +1,22 @@
 Hauptstadt von Deutschland? !A)Muenchen !B)Speyer !C)Bonn !D)Berlin !D
-Hauptstadt von Nepal? A)Kathmandu B)Ruanda C)Lissabon D)Singapur!
+Hauptstadt von Nepal? !A)Kathmandu !B)Ruanda !C)Lissabon !D)Singapur !A
+Wie viele Weihnachtsbäume werden in Deutschland pro Jahr verkauft? !A) 40 Millionen !B) 30 Millionen !C)60 Milionen !D)10 Millionen !B
+Wie viele Liter Bier werden in Deutschland pro Kopf jährlich getrunken? !A)1000 !B)200 !C)20 !D)100 !D
+Wie viele Buchstaben hat das hawaiianische Alphabet? !A)12 !B)20 !C)26 !D)4 !A
+Wie viele Einkerbungen hat ein Golfball? !A)34 !B)10023 !C)224 !D)336 !D
+Einige Monate haben 30, einige 31 Tage. Wie viele haben 28 Tage? !A)1 !B)2 !C)10 !D)12 !D
+Chemie: Was ist „C6H12O6“? !A)Glucose !B)Phosphat !C)Fructose !D)Harnstoff !A
+Welches Land ist flächenmäßig das zweitgrößte der Erde? !A)USA !B)China !C)Kanada !D)Grönland !C
+Aus wie vielen Kräuter ist Jägermeister gemacht? !A)3 !B)30 !C)44 !D)56 !D
+In welcher Stadt wurden die Olympischen Spiele 2000 ausgetragen? !A)Tokio !B)Berlin !C)Kathmandu !D)Sydney !D
+In welchem Jahr Begann der Zweite Weltkrieg? !A)1939 !B)1960 !C)1914 !D)1945 !A
+Im Zuge welcher Revolution wurde Ludwig XVI. zum Tode verurteilt und hingerichtet? !A) Amerikanische Revolution !B)Französische Revolution !C)Deutsche Revolution !D)Japanische Revolution !B
+Wer war der erste Bundeskanzler der Bundesrepublik Deutschland? !A)Helmut Schmidt !B)Willy Brandt !C)Ludwig Erhard !D)Konrad Adenauer !D
+In welchem Jahr wurde das World Trade Center zerstört? !A)1996 !B)1990 !C)2001 !D)2010 !C
+Was kauften die USA im Jahre 1867 vom Russischen Kaiserreich? !A)Grönland !B)Malediven !C)Alaska !D)Haiti !C
+In welchem Jahr wurde die NATO gegründet? !A)1924 !B)1974 !C)1949 !D)1950 !C
+Wer gilt als Erfinder des modernen Buchdrucks mit beweglichen Metalllettern und der Druckerpresse? !A)Gregor Mendel !B)Ludwig Erhard !C)Johannes Gutenberg !D)Papst Franziskus !C
+Eines der sieben Weltwunder ist der Koloss von ____ ? !A)Gizeh !B)Olympia !C)Ephesos !D)Rhodos !D
+Zwischen 1918 und 1920 starben Millionen von Menschen durch .... ? !A)die Russische Grippe !B)die Chinesische Grippe !C)die Spanische Grippe !D)die Japanische Grippe !C
+Wie nannte man die Armee der Sowjetunion im 20. Jahrhundert? !A)Schwarze Armee !B)Grüne Armee !C)Blaue Armee !D)Rote Armee !D
+
