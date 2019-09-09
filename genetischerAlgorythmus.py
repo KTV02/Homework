@@ -8,7 +8,7 @@ grenzgewichtRucksack = 15.0
 # Funktionen zur Erzeugung einer Lösung
 
 anzahlIndividuen = 50
-mutationswahrscheinlichkeit = 0.05
+mutationswahrscheinlichkeit = 0.4
 grenzwert=grenzgewichtRucksack
 anzahlEigenschaften=10
 import random
@@ -29,27 +29,37 @@ def erzeugePopulation():
 def fitness(individuum):
     wert=0
     for i in range(len(individuum)):
-        if gegenstaende[i]=="1":
+        if individuum[i]=="1":
             wert+=gegenstaende[i][1]
-    if gesamtGreznAttribut(individuum)>grenzwert:
-        differenz=gesamtGreznAttribut(individuum)-grenzwert
+    if gesamtGrenzAttribut(individuum)>grenzwert:
+        differenz=gesamtGrenzAttribut(individuum)-grenzwert
         wert-=100*2**(differenz-1)        
     return wert
 
 def gesamtGrenzAttribut(individuum):
     wert=0
     for i in range(len(individuum)):
-        if gegenstaende[i] =="1":
+        if individuum[i] =="1":
             wert+=gegenstaende[i][0]
     return wert
     
 
 def kreuzung(individuum1, individuum2):
-    # ...
+    neuesIndividuum1 = ""
+    neuesIndividuum2 = ""
+    for i in range(anzahlEigenschaften):
+        rand = random.randint(0,1)
+        if rand == 0:
+           neuesIndividuum1 += individuum1[i]
+           neuesIndividuum2 += individuum2[i]
+        else:
+           neuesIndividuum1 += individuum2[i]
+           neuesIndividuum2 += individuum1[i] 
     return (neuesIndividuum1, neuesIndividuum2)
 
 def mutation(individuum):
-    # ...
+    if random.randint(1,10)==mutationswarscheinlichkeit:
+        pass
     return individuum
 
 def selektionElternteil(population):
