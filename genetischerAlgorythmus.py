@@ -8,7 +8,7 @@ grenzgewichtRucksack = 15.0
 # Funktionen zur Erzeugung einer Lösung
 
 anzahlIndividuen = 50
-mutationswahrscheinlichkeit = 0.4
+mutationswahrscheinlichkeit = 4
 grenzwert=grenzgewichtRucksack
 anzahlEigenschaften=10
 import random
@@ -33,7 +33,7 @@ def fitness(individuum):
             wert+=gegenstaende[i][1]
     if gesamtGrenzAttribut(individuum)>grenzwert:
         differenz=gesamtGrenzAttribut(individuum)-grenzwert
-        wert-=100*2**(differenz-1)        
+        wert-=120*2**(differenz-1)        
     return wert
 
 def gesamtGrenzAttribut(individuum):
@@ -55,30 +55,63 @@ def kreuzung(individuum1, individuum2):
         else:
            neuesIndividuum1 += individuum2[i]
            neuesIndividuum2 += individuum1[i] 
-    return (neuesIndividuum1, neuesIndividuum2)
+    return (mutation(neuesIndividuum1),mutation(neuesIndividuum2))
 
 def mutation(individuum):
-    if random.randint(1,10)==mutationswarscheinlichkeit:
-        pass
+    if random.randint(1,10)<=mutationswahrscheinlichkeit:
+        randindex=random.randint(0,9)
+        if individuum[randindex]=="0":
+            individuum=individuum[:randindex]+"1"+individuum[randindex+1:]
+        else:
+            individuum=individuum[:randindex]+"0"+individuum[randindex+1:]
     return individuum
 
-def selektionElternteil(population):
-    # ...
-    return elternteil
+def selektionElternteile(population):
+    eltern=[]
+    sortiert=sort(population)
+    eltern+=sortiert[(anzahlIndividuen-anzahlIndividuen//5):]
+    return eltern
 
+def sort(population):
+   less = []
+   greater = []
+   p=population[:]
+   if len(p) > 1:
+       pivot = p[0]
+       for x in p[1:]:
+           if fitness(x) < fitness(pivot):
+              less.append(x)
+           else:
+               greater.append(x)
+       return sort(less)+[pivot]+sort(greater)
+   else:
+       return p
+    
 def naechstePopulation(population):
-    # ...
-    return neuePopulation
+    eltern=selektionElternteile(population)
+    neuePopulation=[]
+    for x in eltern[:anzahlIndividuen//10]:
+        for i in eltern:
+            neuePopulation+=kreuzung(x,i)
+            random.shuffle(neuePopulation) #This method changes the original list/tuple/string, it does not return a new list
+    return neuePopulation[:anzahlIndividuen]
 
 def maxFitness(population):
-    # ...
-    return (maxIndividuum, maximumFitness)
+    maxIndividuum=sort(population)[len(population)-1]
+    return (maxIndividuum,fitness(maxIndividuum))
 
-def loesungGenetischerAlgorithmus():
-    # ...
-    pass
-    #return loesung
+def loesungGenetischerAlgorithmus(generationen):
+    loesung=naechstePopulation(erzeugePopulation())
+    for i in range(generationen):
+        loesung=naechstePopulation(loesung)
+    return maxFitness(loesung)
 
 # Test
-#for i in range(20):
- #   print(loesungGenetischerAlgorithmus())
+for i in range(20):
+    print(loesungGenetischerAlgorithmus(20))
+
+
+
+
+    
+            
