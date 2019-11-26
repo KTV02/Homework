@@ -63,5 +63,5 @@ def crc(bitfolge, polynom = '10011'):
     return ''.join(schieberegister[1:])          
 
             
-interface = Serial("com5")
+interface = Serial("com4")
 decode(interface, 1)
