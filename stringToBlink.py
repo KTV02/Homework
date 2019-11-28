@@ -23,11 +23,11 @@ def crc(bitfolge, polynom = '10011'):
             schieberegister = schieberegister[1:lp]+list(bitliste[lp+i])
     return ''.join(schieberegister[1:])
 
-def txtToBinary(text,sleep,interface):
+def txtToBinary(text,sleep,interface,empfänger,sender="0100"):
     converted=""
     counter=0
-    modified=""
     byte=""
+    final=""
     for i in text:
         converted+=bin(ord(i))[2:].zfill(8)
     print(converted)
@@ -36,13 +36,21 @@ def txtToBinary(text,sleep,interface):
         if counter<=8:
             byte+=i
         if counter==8:
-            modified+=byte+crc(byte)
-            print("modified",modified)
-            byte=""
+            final+=modify(byte,empfänger,sender)
+            print("fertiges byte: ",final,"länge: ",len(final))
             counter=0
-    converted=modified
-    send(converted,sleep,interface)
+            byte=""
+    send(final,sleep,interface)
     return converted
+
+def modify(byte,empfänger,sender="0100"):
+    byte=empfänger+sender+byte
+    return addCRC(byte)
+    
+def addCRC(bits):
+    modified=bits+crc(bits)
+    return modified
+    
     
 def send(code,sleep,interface):
     s= interface
@@ -61,14 +69,15 @@ def send(code,sleep,interface):
             s.setRTS(1)
             time.sleep(sleep)
         else:
-            s.setRTS(0)
+            s.setRTS(0) 
             time.sleep(sleep)
         counter+=1
     s.setRTS(0)
     time.sleep(sleep)
     
-schnittstelle=Serial("com3")
-txtToBinary("A",1,schnittstelle)
+schnittstelle=Serial("com5")
+schnittstelle.setRTS(0)
+txtToBinary("A",1,schnittstelle,"0001","0100")
 
 
             

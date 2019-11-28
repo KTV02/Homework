@@ -9,31 +9,34 @@ def decode(interface, bitzeit):
         if s.getCTS() == False:
             time.sleep(bitzeit/10)
         else:
-            time.sleep(bitzeit*1.5)    
-            for i in range(12):
-                outcome = s.getCTS()
-                if i<8:                  
-                    if outcome == False:
-                        byte += "0"
-                        time.sleep(bitzeit)
-                    elif outcome == True:
-                        byte += "1"
-                        time.sleep(bitzeit)
-                if i>=8 and i<12:
-                    if outcome == False:
-                        security += "0"
-                        time.sleep(bitzeit)
-                    elif outcome == True:
-                        security += "1"
-                        time.sleep(bitzeit)
-            if crc(byte) == security:
-                print("Byte is ok")
-                print(byte)
-                print(toString(byte))
-            else:
-                print("Error, byte is not ok")
+            time.sleep(bitzeit*1.5)
             byte=""
             security=""
+            daten = ""
+            empfänger = ""
+            sender = ""
+            crcGesamt = ""
+            for i in range(20):
+                if(s.getCTS()):
+                    daten += '1'
+                else:
+                    daten += '0'
+                time.sleep(bitzeit)
+            empfänger = daten[:4]
+            sender = daten[4:8]
+            byte = daten[8:16]
+            crcGesamt = empfänger[:] + sender[:] + byte[:]
+            security = daten[16:]
+            if empfänger == kennung: 
+                print(byte)
+                print(toString(byte))
+                print(security)
+                print(sender)
+                if crc(crcGesamt) == security:
+                    print("Byte is ok")
+                else:
+                    print("Error, byte is not ok")
+
             
 
 def toString(codierung):
@@ -63,5 +66,7 @@ def crc(bitfolge, polynom = '10011'):
     return ''.join(schieberegister[1:])          
 
             
-interface = Serial("com4")
+interface = Serial("com5")
+kennung = "0001"
+interface.setRTS(0)
 decode(interface, 1)
